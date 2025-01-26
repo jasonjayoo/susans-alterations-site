@@ -1,10 +1,11 @@
 import React from "react";
 import LandingPage from "./components/LandingPage";
-import Footer from "./components/Footer";
+
 
 let myStyle = {
   position: "relative",
   zIndex: '0 !important"',
+  flex: "1",
 };
 
 function App() {
@@ -12,7 +13,6 @@ function App() {
     <div className="App">
       <div style={myStyle}>
         <LandingPage />
-        <Footer />
       </div>
     </div>
   );

@@ -1,137 +1,118 @@
-import React from "react";
+// import React from "react";
 
-// // Here we are using object destructuring assignment to pluck off our variables from the props object
-// // We assign them to their own variable names
 // function NavBar({ currentPage, setCurrentPage }) {
-//   return (
-//     <div id="tabs">
-//       <div className="hamburger">
-//         <div className="bar"></div>
-//       </div>
-//       <div className="nav nav-tabs nav-fill" id="nav-tab">
-//         <li>
+//     return (
+//       <div id="tabs">
+//         <div className="nav nav-tabs nav-fill u-padding-t--xl" id="nav-tab">
 //           <a
 //             href="#about"
 //             onClick={() => setCurrentPage("About")}
-//             // Check to see if the currentPage is `About`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
 //             className={
 //               currentPage === "About"
 //                 ? "nav-item nav-link active"
-//                 : "nav-item  nav-link"
+//                 : "nav-item nav-link"
 //             }
 //           >
 //             About
 //           </a>
-//         </li>
-//         <li>
 //           <a
-//             href="#portfolio"
-//             onClick={() => setCurrentPage("Portfolio")}
-//             // Check to see if the currentPage is `Blog`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+//             href="#info"
+//             onClick={() => setCurrentPage("Info")}
 //             className={
-//               currentPage === "Portfolio"
-//                 ? "nav-item  nav-link active"
-//                 : "nav-link"
-//             }
-//           >
-//             Portfolio
-//           </a>
-//         </li>
-
-//         <li>
-//           <a
-//             href="#contact"
-//             onClick={() => setCurrentPage("Contact")}
-//             // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-//             className={
-//               currentPage === "Contact"
-//                 ? "nav-item  nav-link active"
-//                 : "nav-item nav-link"
-//             }
-//           >
-//             Contact
-//           </a>
-//         </li>
-//         <li>
-//           <a
-//             href="#resume"
-//             onClick={() => setCurrentPage("Resume")}
-//             // This is a conditional (ternary) operator that checks to see if the current page is "Home"
-//             // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
-//             className={
-//               currentPage === "Resume"
+//               currentPage === "Info"
 //                 ? "nav-item nav-link active"
 //                 : "nav-item nav-link"
 //             }
 //           >
-//             Resume
+//             Info
 //           </a>
-//         </li>
+//         </div>
 //       </div>
-//     </div>
-//   );
-// }
-
+//     );
+//   }
+  
 // export default NavBar;
+import React, { useState } from "react";
+import useWindowWidth from "../hooks/useWindowWidth"; // Ensure this path is correct
 
-// Here we are using object destructuring assignment to pluck off our variables from the props object
-// We assign them to their own variable names
 function NavBar({ currentPage, setCurrentPage }) {
+  const [menuOpen, setMenuOpen] = useState(false); // State for dropdown menu
+  const windowWidth = useWindowWidth(); // Use the custom hook to get the window width
+
+  // Debugging log to ensure the width is updating correctly
+  console.log("Current window width:", windowWidth);
+
+  const handleMenuToggle = () => {
+    setMenuOpen(!menuOpen); // Toggle the menu open/closed
+  };
+
   return (
     <div id="tabs">
-      <div className="nav nav-tabs nav-fill" id="nav-tab">
-        <a
-          href="#about"
-          onClick={() => setCurrentPage("About")}
-          // Check to see if the currentPage is `About`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={
-            currentPage === "About"
-              ? "nav-item nav-link active"
-              : "nav-item  nav-link"
-          }
-        >
-          About
-        </a>
-        <a
-          href="#portfolio"
-          onClick={() => setCurrentPage("Portfolio")}
-          // Check to see if the currentPage is `Blog`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={
-            currentPage === "Portfolio"
-              ? "nav-item  nav-link active"
-              : "nav-link"
-          }
-        >
-          Portfolio
-        </a>
-        <a
-          href="#contact"
-          onClick={() => setCurrentPage("Contact")}
-          // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-          className={
-            currentPage === "Contact"
-              ? "nav-item  nav-link active"
-              : "nav-item nav-link"
-          }
-        >
-          Contact
-        </a>
-        <a
-          href="#resume"
-          onClick={() => setCurrentPage("Resume")}
-          // This is a conditional (ternary) operator that checks to see if the current page is "Home"
-          // If it is, we set the current page to 'nav-link-active', otherwise we set it to 'nav-link'
-          className={
-            currentPage === "Resume"
-              ? "nav-item nav-link active"
-              : "nav-item nav-link"
-          }
-        >
-          Resume
-        </a>
-      </div>
+      {windowWidth <= 650 ? (
+        // Hamburger menu for small screens
+        <div className="hamburger-menu u-flex">
+          <button
+            onClick={handleMenuToggle}
+            className="hamburger-icon u-padding--md"
+          >
+            {menuOpen ? "×" : "☰"} {/* Simple Unicode characters for icons */}
+          </button>
+
+          {menuOpen && (
+            <div className="dropdown-menu">
+              <a
+                href="#about"
+                onClick={() => {
+                  setCurrentPage("About");
+                  setMenuOpen(false); // Close menu after selection
+                }}
+                className="dropdown-item"
+              >
+                About
+              </a>
+              <a
+                href="#info"
+                onClick={() => {
+                  setCurrentPage("Info");
+                  setMenuOpen(false); // Close menu after selection
+                }}
+                className="dropdown-item"
+              >
+                Info
+              </a>
+            </div>
+          )}
+        </div>
+      ) : (
+        // Regular tabs for larger screens
+        <div className="nav nav-tabs nav-fill u-padding-t--xl" id="nav-tab">
+          <a
+            href="#about"
+            onClick={() => setCurrentPage("About")}
+            className={
+              currentPage === "About"
+                ? "nav-item nav-link active"
+                : "nav-item nav-link"
+            }
+          >
+            About
+          </a>
+          <a
+            href="#info"
+            onClick={() => setCurrentPage("Info")}
+            className={
+              currentPage === "Info"
+                ? "nav-item nav-link active"
+                : "nav-item nav-link"
+            }
+          >
+            Info
+          </a>
+        </div>
+      )}
     </div>
   );
 }
 
 export default NavBar;
+
