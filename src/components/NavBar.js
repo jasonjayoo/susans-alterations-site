@@ -1,44 +1,11 @@
-// import React from "react";
-
-// function NavBar({ currentPage, setCurrentPage }) {
-//     return (
-//       <div id="tabs">
-//         <div className="nav nav-tabs nav-fill u-padding-t--xl" id="nav-tab">
-//           <a
-//             href="#about"
-//             onClick={() => setCurrentPage("About")}
-//             className={
-//               currentPage === "About"
-//                 ? "nav-item nav-link active"
-//                 : "nav-item nav-link"
-//             }
-//           >
-//             About
-//           </a>
-//           <a
-//             href="#info"
-//             onClick={() => setCurrentPage("Info")}
-//             className={
-//               currentPage === "Info"
-//                 ? "nav-item nav-link active"
-//                 : "nav-item nav-link"
-//             }
-//           >
-//             Info
-//           </a>
-//         </div>
-//       </div>
-//     );
-//   }
-  
-// export default NavBar;
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import useWindowWidth from "../hooks/useWindowWidth";
 import mainBanner from "../assets/susansAlterations.png"; 
 
 function NavBar({ currentPage, setCurrentPage }) {
   const [menuOpen, setMenuOpen] = useState(false); // State for dropdown menu
   const windowWidth = useWindowWidth(); // Use the custom hook to get the window width
+  const dropdownRef = useRef(null);
 
   // Debugging log to ensure the width is updating correctly
   console.log("Current window width:", windowWidth);
@@ -51,6 +18,21 @@ function NavBar({ currentPage, setCurrentPage }) {
     setCurrentPage("Info"); // Set the page to "Info"
     window.location.hash = "#info"; // Redirect to "Info" section
   };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target) && !event.target.closest(".hamburger-icon")) {
+        setMenuOpen(false); // Close the dropdown if clicked outside
+      }
+    };
+    // Add event listener to detect clicks outside of the dropdown
+    document.addEventListener("mousedown", handleClickOutside);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <div id="tabs">
@@ -65,7 +47,7 @@ function NavBar({ currentPage, setCurrentPage }) {
           </button>
 
           {menuOpen && (
-            <div className="dropdown-menu">
+            <div ref={dropdownRef}  className="dropdown-menu">
               <a
                 href="#about"
                 onClick={() => {
