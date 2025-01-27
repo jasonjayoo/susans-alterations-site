@@ -26,11 +26,11 @@ export default function About() {
         <section className="u-padding-b--lg u-text-align--center">
             <h3 className="u-font--xl">Hours:</h3>
             <ul className="hours-list">
-                <li><strong>Monday:</strong> 9:00 AM - 5:00 PM</li>
-                <li><strong>Tuesday:</strong> 9:00 AM - 5:00 PM</li>
-                <li><strong>Wednesday:</strong> 9:00 AM - 5:00 PM</li>
-                <li><strong>Thursday:</strong> 9:00 AM - 5:00 PM</li>
-                <li><strong>Friday:</strong> 9:00 AM - 5:00 PM</li>
+                <li><strong>Monday:</strong> 9:30 AM - 6:30 PM</li>
+                <li><strong>Tuesday:</strong> 9:30 AM - 6:30 PM</li>
+                <li><strong>Wednesday:</strong> 9:30 AM - 6:30 PM</li>
+                <li><strong>Thursday:</strong> 9:30 AM - 6:30 PM</li>
+                <li><strong>Friday:</strong> 9:30 AM - 6:30 PM</li>
                 <li><strong>Saturday:</strong> 10:00 AM - 4:00 PM</li>
                 <li><strong>Sunday:</strong> Closed</li>
             </ul>
