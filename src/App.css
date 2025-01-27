@@ -1,8 +1,10 @@
 .App {
   display: flex;
   flex-direction: column;
-  height: 80vh;
-  text-align: center;
+  min-height: 70vh;
+  box-sizing: border-box;
+  overflow-x: hidden;
+
 }
 
 .App-logo {
@@ -37,5 +39,11 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .App {
+    min-height: 80vh;
   }
 }
