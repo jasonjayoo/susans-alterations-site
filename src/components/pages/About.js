@@ -11,7 +11,7 @@ import Image9 from "../../assets/carousel/image9.png";
 import Image10 from "../../assets/carousel/image10.png";
 import Image11 from "../../assets/carousel/image11.png";
 import Image12 from "../../assets/carousel/image12.png";
-import mainBanner from "../../assets/susansAlterations.png";
+// import mainBanner from "../../assets/susansAlterations.png";
 import Mobile from "./Mobile"
 import useWindowWidth from "../../hooks/useWindowWidth";
 
@@ -54,15 +54,11 @@ export default function About() {
 
   return (
     <div id="about">
-      {/* <h1 className="u-padding-b--none u-margin-b--none">
-        <span className="main-title">Susan's Alterations</span>
-      </h1> */}
-
-        <img alt="susans alterations" className="main" src={mainBanner} />
-
-      
-
-      <div className="carousel u-margin-b--md">
+      <h1 className="u-padding-t--none u-margin-t--none">
+        <span className="main-title">Welcome to Susan's Alterations!</span>
+      </h1>
+      <div className="carousel u-margin-b--lg">
+      <div className="carousel-image-container">
         <button className="carousel-button prev" onClick={handlePrevious}>
           &lt;
         </button>
@@ -74,6 +70,7 @@ export default function About() {
         <button className="carousel-button next" onClick={handleNext}>
           &gt;
         </button>
+      </div>
       </div>
       {windowWidth <= 650 && <Mobile />} 
     </div>

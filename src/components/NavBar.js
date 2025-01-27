@@ -33,7 +33,8 @@
   
 // export default NavBar;
 import React, { useState } from "react";
-import useWindowWidth from "../hooks/useWindowWidth"; // Ensure this path is correct
+import useWindowWidth from "../hooks/useWindowWidth";
+import mainBanner from "../assets/susansAlterations.png"; 
 
 function NavBar({ currentPage, setCurrentPage }) {
   const [menuOpen, setMenuOpen] = useState(false); // State for dropdown menu
@@ -50,12 +51,12 @@ function NavBar({ currentPage, setCurrentPage }) {
     <div id="tabs">
       {windowWidth <= 650 ? (
         // Hamburger menu for small screens
-        <div className="hamburger-menu u-flex">
+        <div className="hamburger-menu u-padding-b--sm">
           <button
             onClick={handleMenuToggle}
             className="hamburger-icon u-padding--md"
           >
-            {menuOpen ? "×" : "☰"} {/* Simple Unicode characters for icons */}
+            ☰ 
           </button>
 
           {menuOpen && (
@@ -82,10 +83,12 @@ function NavBar({ currentPage, setCurrentPage }) {
               </a>
             </div>
           )}
+          <img alt="susans alterations" className="main" src={mainBanner} />
         </div>
       ) : (
         // Regular tabs for larger screens
-        <div className="nav nav-tabs nav-fill u-padding-t--xl" id="nav-tab">
+        <div className="nav nav-tabs nav-fill u-padding-t--md u-padding-b--sm" id="nav-tab">
+            <div className="nav-links">
           <a
             href="#about"
             onClick={() => setCurrentPage("About")}
@@ -102,14 +105,23 @@ function NavBar({ currentPage, setCurrentPage }) {
             onClick={() => setCurrentPage("Info")}
             className={
               currentPage === "Info"
-                ? "nav-item nav-link active"
-                : "nav-item nav-link"
+                ? "nav-item nav-link u-padding-l--sm active"
+                : "nav-item nav-link u-padding-l--sm"
             }
           >
             Info
           </a>
+          </div>
+
+            <img alt="susans alterations" className="main" src={mainBanner} />
+
+          {/* <div className="nav-banner">
+            <img alt="susans alterations" className="main" src={mainBanner} />
+          </div> */}
+          
         </div>
       )}
+      
     </div>
   );
 }
