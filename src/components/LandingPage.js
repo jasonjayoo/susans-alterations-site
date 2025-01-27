@@ -6,7 +6,7 @@ import Info from "./pages/Info";
 // import Contact from "./pages/Contact";
 
 export default function PortfolioMain() {
-  const [currentPage, setCurrentPage] = useState("About");
+  const [currentPage, setCurrentPage] = useState("Info");
   const renderPage = () => {
     if (currentPage === "Info") {
       return <Info />;

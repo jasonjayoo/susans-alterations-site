@@ -47,6 +47,11 @@ function NavBar({ currentPage, setCurrentPage }) {
     setMenuOpen(!menuOpen); // Toggle the menu open/closed
   };
 
+  const handleBannerClick = () => {
+    setCurrentPage("Info"); // Set the page to "Info"
+    window.location.hash = "#info"; // Redirect to "Info" section
+  };
+
   return (
     <div id="tabs">
       {windowWidth <= 650 ? (
@@ -83,37 +88,38 @@ function NavBar({ currentPage, setCurrentPage }) {
               </a>
             </div>
           )}
-          <img alt="susans alterations" className="main" src={mainBanner} />
+          <img alt="susans alterations" className="main" src={mainBanner} onClick={handleBannerClick}/>
         </div>
       ) : (
         // Regular tabs for larger screens
         <div className="nav nav-tabs nav-fill u-padding-t--md u-padding-b--sm" id="nav-tab">
             <div className="nav-links">
+            <a
+            href="#info"
+            onClick={() => setCurrentPage("Info")}
+            className={
+              currentPage === "Info"
+                ? "nav-item nav-link active"
+                : "nav-item nav-link "
+            }
+          >
+            Info
+          </a>
           <a
             href="#about"
             onClick={() => setCurrentPage("About")}
             className={
               currentPage === "About"
-                ? "nav-item nav-link active"
-                : "nav-item nav-link"
-            }
-          >
-            About
-          </a>
-          <a
-            href="#info"
-            onClick={() => setCurrentPage("Info")}
-            className={
-              currentPage === "Info"
                 ? "nav-item nav-link u-padding-l--sm active"
                 : "nav-item nav-link u-padding-l--sm"
             }
           >
-            Info
+            About
           </a>
+
           </div>
 
-            <img alt="susans alterations" className="main" src={mainBanner} />
+            <img alt="susans alterations" className="main" src={mainBanner} onClick={handleBannerClick}/>
 
           {/* <div className="nav-banner">
             <img alt="susans alterations" className="main" src={mainBanner} />
