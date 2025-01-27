@@ -16,9 +16,9 @@ const Footer = () => {
 
         <a
           id="myemail"
-          href="mailto:jasonjayoo@outlook.com"
-          alt="email Jason Yoo"
-          title="email me at jasonjayoo@outlook.com"
+          href="mailto:susansalterationsandtailoring@gmail.com"
+          alt="email Susans Alterations"
+          title="email me us susansalterationsandtailoring@gmail.com"
         >
           <i class="fa fa-envelope fa-3x contact" id="emaillogo"></i>
         </a>
