@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/susans-alterations-site/static/css/main.321bc13f.css",
+    "main.js": "/susans-alterations-site/static/js/main.f00e3a9b.js",
+    "static/js/453.8c2eb073.chunk.js": "/susans-alterations-site/static/js/453.8c2eb073.chunk.js",
+    "static/media/image4.png": "/susans-alterations-site/static/media/image4.cc3a891e898ff292b47c.png",
+    "static/media/image5.png": "/susans-alterations-site/static/media/image5.c152cd2b18f3b53a74e8.png",
+    "static/media/image2.png": "/susans-alterations-site/static/media/image2.c0fe5dbf0f63b7f56a7c.png",
+    "static/media/image3.png": "/susans-alterations-site/static/media/image3.4eb99a415c1ac5ebd408.png",
+    "static/media/image6.png": "/susans-alterations-site/static/media/image6.edb795e6667fe01e973e.png",
+    "static/media/image7.png": "/susans-alterations-site/static/media/image7.f3d363e971b7b2dc7989.png",
+    "static/media/image1.png": "/susans-alterations-site/static/media/image1.7ea18a99ca5f59eed0f3.png",
+    "static/media/image11.png": "/susans-alterations-site/static/media/image11.d5c8ce68f331f1dde484.png",
+    "static/media/image9.png": "/susans-alterations-site/static/media/image9.ebc387cd3117e33dfb2b.png",
+    "static/media/image10.png": "/susans-alterations-site/static/media/image10.3afa93644f8945343b6c.png",
+    "static/media/image8.png": "/susans-alterations-site/static/media/image8.6c6823801f634aebba6c.png",
+    "static/media/image12.png": "/susans-alterations-site/static/media/image12.a65b9f573fcc29b18f46.png",
+    "static/media/susansAlterations.png": "/susans-alterations-site/static/media/susansAlterations.f626a10bea41e6e284de.png",
+    "index.html": "/susans-alterations-site/index.html",
+    "main.321bc13f.css.map": "/susans-alterations-site/static/css/main.321bc13f.css.map",
+    "main.f00e3a9b.js.map": "/susans-alterations-site/static/js/main.f00e3a9b.js.map",
+    "453.8c2eb073.chunk.js.map": "/susans-alterations-site/static/js/453.8c2eb073.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.321bc13f.css",
+    "static/js/main.f00e3a9b.js"
+  ]
+}
