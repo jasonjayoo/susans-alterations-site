@@ -7,7 +7,7 @@ export default function About() {
       <h1 className="u-padding-b--sm">
         <span className="main-title">Please call us for appointments and questions</span>
       </h1>
-      <section className="main-section u-padding-b--lg u-text-align--center">
+      <section className="main-section u-padding-b--sm u-text-align--center">
         <p className="u-padding-t--none">
             Location: &nbsp;
             <span className="u-padding-t--md">433 West Commonwealth Avenue  &nbsp; Fullerton, CA 92832</span>
@@ -17,7 +17,7 @@ export default function About() {
       </section>
 
       <section className="u-padding-t--lg u-text-align--center">
-        <p className="u-padding-t--none">
+        <p className="u-padding-t--none u-margin-t--md">
             Phone: &nbsp;
             <a href="tel:7147388891" className="phone-link u-text-decoration--none">(714) 738-8891</a>
         </p>

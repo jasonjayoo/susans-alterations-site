@@ -67,7 +67,9 @@ padding-right: 8px;
 .u-padding-r--xl {
 padding-right: 12px;
 }
-
+.u-margin--none {
+    margin: 0;
+}
 .u-margin-b--none {
 margin-bottom: 0;
 }
@@ -132,6 +134,10 @@ margin-bottom: 12px;
 
 .u-text-decoration--none {
 text-decoration: none;
+}
+
+.u-text-decoration--underline {
+    text-decoration: underline;
 }
 
 .u-flex {

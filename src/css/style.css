@@ -26,6 +26,7 @@ font-size: 24px;
 
 .main-section {
 text-align: left;
+margin: 0 32px;
 }
 
 
@@ -101,7 +102,6 @@ background-color: #e6d693;
 margin-top: 20px;
 }
 
-
 .info-page {
 position: absolute;
 top: 55%; /* Vertically center */
@@ -110,6 +110,7 @@ transform: translate(-50%, -50%); /* Adjust for offset to truly center */
 display: flex;
 flex-direction: column;
 }
+
 .info-page section span {
 display: block; /* Force each span to render on a new line */
 text-align: center; /* Optional: Ensure the text is centered */
@@ -127,6 +128,10 @@ margin-bottom: 10px; /* Add spacing between the spans */
 .hours-list > li {
   font-size: 14px;
   margin-left: 112px;
+}
+
+.main-section {
+  margin: 0 
 }
 
 #yelp,
@@ -321,6 +326,9 @@ h1 > .main-title {
  }
  .mobile-text-container {
   margin: 10px 30px 0;
+ }
+ .info-page > h1 {
+  margin: 0;
  }
 }
 
