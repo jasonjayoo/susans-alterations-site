@@ -103,7 +103,9 @@ Click [here](https://github.com/jasonjayoo/susans-alterations-site) to go to my 
 
 ## URL (Published Webpage):
 
-<a href="https://jasonjayoo.github.io/susans-alterations-site/" target="_blank">Susans Alterations</a>
+<!-- <a href="https://jasonjayoo.github.io/susans-alterations-site/" target="_blank">Susans Alterations</a> -->
+
+<a href="https://bit.ly/susansalterations" target="_blank">Susans Alterations</a>
 
 
 ## Author:
