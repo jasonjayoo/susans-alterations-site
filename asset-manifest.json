@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/susans-alterations-site/static/css/main.1675a28c.css",
+    "main.css": "/susans-alterations-site/static/css/main.dbf6f8ca.css",
     "main.js": "/susans-alterations-site/static/js/main.e28852bf.js",
     "static/js/453.8c2eb073.chunk.js": "/susans-alterations-site/static/js/453.8c2eb073.chunk.js",
     "static/media/image4.png": "/susans-alterations-site/static/media/image4.cc3a891e898ff292b47c.png",
@@ -17,12 +17,12 @@
     "static/media/image12.png": "/susans-alterations-site/static/media/image12.a65b9f573fcc29b18f46.png",
     "static/media/susansAlterations.png": "/susans-alterations-site/static/media/susansAlterations.f626a10bea41e6e284de.png",
     "index.html": "/susans-alterations-site/index.html",
-    "main.1675a28c.css.map": "/susans-alterations-site/static/css/main.1675a28c.css.map",
+    "main.dbf6f8ca.css.map": "/susans-alterations-site/static/css/main.dbf6f8ca.css.map",
     "main.e28852bf.js.map": "/susans-alterations-site/static/js/main.e28852bf.js.map",
     "453.8c2eb073.chunk.js.map": "/susans-alterations-site/static/js/453.8c2eb073.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1675a28c.css",
+    "static/css/main.dbf6f8ca.css",
     "static/js/main.e28852bf.js"
   ]
 }
