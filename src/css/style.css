@@ -380,4 +380,8 @@ h1 > .main-title {
 .input {
   font-size: 8.5px;
 }
+
+.dropdown-menu {
+  top: 42px;
+  }
 }
